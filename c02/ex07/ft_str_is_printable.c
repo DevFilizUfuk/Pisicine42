@@ -1,11 +1,11 @@
 #include <stdio.h>
 
-int is_alpha(char c)
-{
-    return ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'));
+int is_alpha(int c)
+{    
+    return ((c >= 32 && c <= 126));
 }
 
-int ft_str_is_alpha(char *str)
+int ft_str_is_printable(char *str)
 {
     if (*str == '\0') {
         return 1;
@@ -24,10 +24,10 @@ int ft_str_is_alpha(char *str)
 int main()
 {
     int result;
-    int d;
-    char str[50];
-    scanf("%s", str);
-    result = ft_str_is_alpha(str);
+    char str[50] = "BFJS";
+    str[2] = 90;
+    printf("%s\n", str);
+    result = ft_str_is_printable(str);
     printf("%d\n", result);
 
     return 0;

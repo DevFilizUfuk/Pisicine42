@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "stdio.h": "c",
+        "ft_strlen": "c",
+        "ft_strncpy": "c",
+        "sstream": "c"
+    }
+}

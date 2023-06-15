@@ -1,11 +1,11 @@
 #include <stdio.h>
 
-int is_alpha(char c)
+int is_alpha(int c)
 {
-    return ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'));
+    return ((c >= 'A' && c <= 'Z'));
 }
 
-int ft_str_is_alpha(char *str)
+int ft_str_is_uppercase(char *str)
 {
     if (*str == '\0') {
         return 1;
@@ -27,7 +27,7 @@ int main()
     int d;
     char str[50];
     scanf("%s", str);
-    result = ft_str_is_alpha(str);
+    result = ft_str_is_uppercase(str);
     printf("%d\n", result);
 
     return 0;
